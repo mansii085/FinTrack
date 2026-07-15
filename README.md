@@ -1,5 +1,4 @@
-# FinTrack — Smart Expense Tracker
-
+# FinTrack — Smart Personal Finance Management Platform
 A production-grade, full-stack MERN expense & income tracker with intelligent, algorithm-driven financial insights, budget planning, savings goals, and a premium glassmorphism SaaS dashboard.
 
 Built as a portfolio/resume-quality project. Modular architecture, clean separation of concerns, and real data-driven analytics — no placeholder screens.
