@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+body {
+  background-image: radial-gradient(circle at 15% 0%, rgba(52, 229, 168, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(129, 140, 248, 0.06), transparent 40%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface/60 backdrop-blur-md border border-surface-border rounded-xl2 shadow-glass;
+  }
+
+  .glass-panel {
+    @apply bg-surface-elevated/50 backdrop-blur-md border border-surface-border rounded-xl2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-mint text-base font-semibold px-4 py-2.5 transition-all hover:bg-mint/90 hover:shadow-glow active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-surface-elevated border border-surface-border text-ink font-medium px-4 py-2.5 transition-all hover:border-mint/40 hover:bg-surface-elevated/80 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg text-ink-muted font-medium px-3 py-2 transition-colors hover:text-ink hover:bg-white/5;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl bg-surface border border-surface-border px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint outline-none transition-colors focus:border-mint/50 focus:ring-1 focus:ring-mint/30;
+  }
+
+  .label-text {
+    @apply text-xs font-medium text-ink-muted mb-1.5 block tracking-wide;
+  }
+
+  .field-error {
+    @apply text-xs text-rose mt-1;
+  }
+
+  .stat-number {
+    @apply font-mono tabular-nums;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
